@@ -1,6 +1,6 @@
 # Setting Up:
 python3 -m pip install --user virtualenv
 
-virtualenv lol-env
+python3 -m venv lol-env
 
 make init
