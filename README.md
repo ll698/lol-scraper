@@ -1,7 +1,9 @@
 # Setting Up:
-> git clone git@github.com:ll698/lol-scraper.git
+Acquire a developer api key from https://developer.riotgames.com/
 
-> make set_up
+- Create a key text file with the api key in the following format API_KEY=KEY
+- Save file to main directory
+- run make set_up
 
 # RiotWatcher API Wrapper:
   Repository: https://github.com/pseudonym117/Riot-Watcher
