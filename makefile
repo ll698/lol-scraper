@@ -1,19 +1,15 @@
 DIR = $(shell pwd)
-
-env:
-	source lol-env/bin/activate;
-server:
-	jupyter notebook --notebook-dir="$(DIR)/notebooks";
-
-install-deps:
-	pip install -r requirements.txt;
+include key
+export $(shell sed 's/=.*//' key)
 
 init:
-	make env;
-	make install-deps;
-	make server;
-
-set_up:
 	pip install virtualenv;
-	python3 -m venv lol-env;
-	make init;
+	python -m venv lol-env;
+	( \
+		source lol-env/bin/activate; \
+		pip install -r lolcrawler/requirements.txt --no-cache-dir; \
+    	pip install lolcrawler/; \
+    	pip install ipykernel; \
+    	python -m ipykernel install --user --name=lol-env; \
+    	jupyter notebook --notebook-dir="$(DIR)/notebooks"; \
+    )

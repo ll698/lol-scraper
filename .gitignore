@@ -1,2 +1,7 @@
 .idea/
 lol-env/
+lol_crawler/dist
+lol_crawler/lol_crawler.egg_info
+key
+.DS_Store
+notebooks/
