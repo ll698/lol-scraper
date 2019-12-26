@@ -1,6 +1,11 @@
 # Setting Up:
-python3 -m pip install --user virtualenv
+Acquire a developer api key from https://developer.riotgames.com/
 
-python3 -m venv lol-env
+- Create a key text file with the api key in the following format API_KEY=KEY
+- Save file to main directory
+- run make set_up
 
-make init
+# RiotWatcher API Wrapper:
+  Repository: https://github.com/pseudonym117/Riot-Watcher
+  
+  Documentation: https://riot-watcher.readthedocs.io/en/latest/
