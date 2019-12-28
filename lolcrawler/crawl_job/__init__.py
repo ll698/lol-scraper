@@ -1,1 +1,1 @@
-from lolcrawler.crawl_job.crawl_job import CrawlJob
+from crawl_job.crawl_job import CrawlJob

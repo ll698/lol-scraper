@@ -8,8 +8,12 @@ init:
 	( \
 		source lol-env/bin/activate; \
 		pip install -r lolcrawler/requirements.txt --no-cache-dir; \
-    	pip install lolcrawler/; \
+    	pip install -e lolcrawler --no-cache-dir; \
     	pip install ipykernel; \
     	python -m ipykernel install --user --name=lol-env; \
     	jupyter notebook --notebook-dir="$(DIR)/notebooks"; \
     )
+
+
+clear:
+	rm -rf lol-env

@@ -1,1 +1,1 @@
-from lolcrawler.watcher.watcher import Watcher
+from watcher.watcher import Watcher
